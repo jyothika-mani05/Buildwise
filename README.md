@@ -1,3 +1,6 @@
+Live Demo:  
+🔗 https://buildwise-e1eo.onrender.com
+
 # BuildWise - AI Construction Planner (Groq Edition)
 
 BuildWise is an AI-powered construction planning assistant designed for the Hyderabad region. It uses the Groq API (Llama 3 70B) to provide intelligent insights, cost estimates, and schedules, backed by a deterministic calculator for accurate material estimation.
