@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuildWise - AI Construction Planner</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="logo">
+                <h1>BuildWise</h1>
+                <span class="badge">BETA</span>
+            </div>
+            <nav class="history">
+                <div class="history-item active">Current Plan</div>
+                <!-- History items would go here -->
+            </nav>
+            <div class="settings">
+                <button id="clear-chat">New Project</button>
+            </div>
+        </aside>
+        
+        <main class="chat-interface">
+            <div class="chat-history" id="chat-history">
+                <div class="message system">
+                    <div class="avatar">AI</div>
+                    <div class="content">
+                        Hello! I'm BuildWise, your construction expert for Hyderabad. 
+                        I can help you estimate costs, materials, and schedules. 
+                        Try asking: "Plan a G+2 house on 200 sq yards."
+                    </div>
+                </div>
+            </div>
+            
+            <div class="input-area">
+                <form id="chat-form">
+                    <textarea id="user-input" placeholder="Describe your project (e.g., 1500 sq ft G+1 residential)..." rows="1"></textarea>
+                    <button type="submit" id="send-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </main>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
