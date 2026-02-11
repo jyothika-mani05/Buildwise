@@ -68,6 +68,5 @@ def calculate():
 
 if __name__ == '__main__':
     #print("Starting BuildWise (Groq Edition) on http://localhost:5002")
-    import os
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
