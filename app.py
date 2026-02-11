@@ -67,5 +67,7 @@ def calculate():
         return jsonify({"error": "Failed to parse AI response. Please try again."}), 500
 
 if __name__ == '__main__':
-    print("Starting BuildWise (Groq Edition) on http://localhost:5002")
-    app.run(debug=True, port=5002)
+    #print("Starting BuildWise (Groq Edition) on http://localhost:5002")
+    import os
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
